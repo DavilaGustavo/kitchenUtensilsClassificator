@@ -44,9 +44,9 @@ for indice, classe in mapeamento.items():
         # Verificar se é uma imagem
         if os.path.isfile(caminho_completo) and arquivo.lower().endswith(('.png', '.jpg', '.jpeg', '.bmp')):
             try:
-                # Carregar e redimensionar a imagem para 256x256
+                # Carregar e redimensionar a imagem para 64x64
                 imagem = Image.open(caminho_completo)
-                imagem_redimensionada = imagem.resize((256, 256), Image.LANCZOS)
+                imagem_redimensionada = imagem.resize((64, 64), Image.LANCZOS)
                 
                 # Salvar imagem processada na pasta numerada correspondente
                 caminho_saida = os.path.join(pasta_numerada, arquivo)
